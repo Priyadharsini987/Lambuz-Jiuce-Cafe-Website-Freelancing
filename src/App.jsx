@@ -66,6 +66,8 @@ function Hero() {
       <div className="hero-video-bg">
         <video
           src={heroVideo}
+          poster="./images/hero_poster.jpg"
+          preload="auto"
           autoPlay
           loop
           muted
@@ -305,13 +307,29 @@ function Reviews() {
 }
 
 function Location() {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
   return (
     <section className="section loc" id="location">
       <div className="map-wrap">
+        {!mapLoaded && (
+          <div className="map-placeholder">
+            <img
+              src="./images/map_thumb.jpg"
+              alt="Map Preview of Lambuz Juice Cafe"
+              className="map-fallback-img"
+            />
+            <div className="map-loading-overlay">
+              <span>📍 Loading Live Map...</span>
+            </div>
+          </div>
+        )}
         <iframe
           title="Lambuz Juice Cafe on Google Maps"
           src={cafe.embedUrl}
           loading="lazy"
+          onLoad={() => setMapLoaded(true)}
+          className={`map-iframe ${mapLoaded ? 'loaded' : ''}`}
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
         />
