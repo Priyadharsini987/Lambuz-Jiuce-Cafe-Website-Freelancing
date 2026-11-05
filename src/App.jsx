@@ -66,7 +66,7 @@ function Hero() {
       <div className="hero-video-bg">
         <video
           src={heroVideo}
-          poster="./images/hero_poster.jpg"
+          poster="./images/hero_poster.png"
           preload="auto"
           autoPlay
           loop
