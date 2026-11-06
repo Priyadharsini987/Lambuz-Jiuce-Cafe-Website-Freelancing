@@ -633,7 +633,14 @@ img { display: block; max-width: 100%; }
   .specials { flex-direction: column; align-items: flex-start; margin: 14px 18px; }
   .spec-grid { width: 100%; }
 }
+.mobile-only-br {
+  display: none;
+}
+
 @media (max-width: 800px) {
+  .mobile-only-br {
+    display: inline;
+  }
   .header { padding: 8px 14px; gap: 8px; }
   .brand img { height: 42px; }
   .burger { display: flex; }

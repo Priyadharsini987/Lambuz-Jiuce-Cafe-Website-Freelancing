@@ -35,6 +35,9 @@ export const cafe = {
   whatsapp: '919003447600',
   whatsappMessage: 'Hi Lambuz Juice Cafe! I would like to order.',
 
+  // Online Ordering links
+  zomatoUrl: 'https://www.zomato.com/erode/lambuz-palayapalayam/order',
+
   // Social profiles
   instagram: 'https://www.instagram.com/lambuz_cafe/',
   instagramHandle: 'lambuz_cafe',
@@ -186,9 +189,14 @@ export const specials = [
 // Real photos supplied by the cafe (see /public/images/Gallery)
 export const gallery = [
   // Food & drink items first
+  { src: './images/Gallery/oreo-shake.jpg', alt: 'Loaded Oreo milkshake with sprinkles and cookies' },
   { src: './images/Gallery/IMG-20261105-WA0014.jpg', alt: 'Lambuz delicious loaded burger' },
+  { src: './images/Gallery/brownie.png', alt: 'Rich fudgy chocolate brownie' },
   { src: './images/Gallery/IMG-20261105-WA0015.jpg', alt: 'Crispy seasoned french fries and bites' },
+  { src: './images/Gallery/choco-lava-icecream.jpg', alt: 'Chocolate lava cake with ice cream swirl' },
   { src: './images/Gallery/IMG-20261105-WA0017.jpg', alt: 'Signature thick chocolate milkshake' },
+  { src: './images/Gallery/mojito.png', alt: 'Fresh mint mojito with ice' },
+  { src: './images/Gallery/gadbad-sundae.png', alt: 'Gadbad sundae with nuts and jelly' },
   // Cafe ambience & dining seating
   { src: './images/Gallery/IMG-20261105-WA0010.jpg', alt: 'Lambuz Cafe cozy wooden seating & dining area' },
   { src: './images/Gallery/IMG-20261105-WA0011.jpg', alt: 'Handcrafted wooden tables and warm cafe lights' },

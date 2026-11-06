@@ -24,6 +24,12 @@ const InstaIcon = () => (
 
 const Arrow = () => <span aria-hidden="true">→</span>;
 
+const SwiggyIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 2a6 6 0 0 0-6 6c0 4.5 6 14 6 14s6-9.5 6-14a6 6 0 0 0-6-6zm0 8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+  </svg>
+);
+
 function Header() {
   const [open, setOpen] = useState(false);
   const links = [
@@ -44,6 +50,9 @@ function Header() {
       <div className="header-actions">
         <a className="btn btn-teal header-btn" href={wa} target="_blank" rel="noreferrer">
           <WaIcon /> <span className="btn-text">Order on WhatsApp</span>
+        </a>
+        <a className="btn btn-orange header-btn header-zomato-btn" href={cafe.zomatoUrl} target="_blank" rel="noreferrer" title="Order on Zomato / Swiggy">
+          <SwiggyIcon /> <span className="btn-text">Order Online</span>
         </a>
       </div>
 
@@ -180,16 +189,16 @@ function About() {
       <Title>Our Story</Title>
 
       <div className="about-intro-wrap">
-        <span className="about-kicker">Since 2020 • Sampath Nagar</span>
+        <span className="about-kicker">Since 2020 • Sampath&nbsp;Nagar</span>
         <h3 className="about-headline">Where Every Sip Becomes a Moment</h3>
         <p className="about-p">
-          Since 2020, Lambuz Juice Cafe has been bringing fresh flavours and delicious moments to Sampath Nagar.
+          Since 2020, Lambuz Juice Cafe has been bringing fresh flavours and delicious moments to Sampath&nbsp;Nagar.
         </p>
         <p className="about-p">
-          From refreshing fruit juices and creamy shakes to indulgent sundaes and freshly prepared snacks, every favourite is made to make your day a little better.
+          From refreshing fruit juices and creamy shakes to indulgent sundaes and freshly prepared snacks, every favourite is made to make your day a little&nbsp;better.
         </p>
         <p className="about-tagline-quote">
-          Fresh flavours. Happy moments. That’s Lambuz.
+          Fresh flavours. Happy moments. <br className="mobile-only-br" />That’s Lambuz Cafe.
         </p>
       </div>
     </section>
@@ -197,16 +206,30 @@ function About() {
 }
 
 function Gallery() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? gallery : gallery.slice(0, 8);
+
   return (
     <section className="section" id="gallery">
       <Title>Moments & Creations Gallery</Title>
       <div className="gal-grid">
-        {gallery.map((g, idx) => (
+        {visible.map((g, idx) => (
           <figure className="gal" key={g.src}>
             <img src={g.src} alt={g.alt || `Lambuz Cafe creation ${idx + 1}`} loading="lazy" />
           </figure>
         ))}
       </div>
+      {!showAll && gallery.length > 8 && (
+        <div style={{ textAlign: 'center', marginTop: '28px' }}>
+          <button
+            className="btn btn-outline"
+            onClick={() => setShowAll(true)}
+            style={{ padding: '10px 28px', fontSize: '14.5px', borderRadius: '999px', cursor: 'pointer' }}
+          >
+            View More Photos
+          </button>
+        </div>
+      )}
     </section>
   );
 }
@@ -260,20 +283,12 @@ function Reviews() {
         </div>
         <div className="reviews-actions">
           <a
-            className="btn btn-ghost review-cta"
-            href={cafe.googleReviewUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GoogleIcon /> View More Reviews on Google
-          </a>
-          <a
             className="btn btn-orange review-cta"
             href={cafe.googleReviewUrl}
             target="_blank"
             rel="noreferrer"
           >
-            ✍️ Post Yours
+            <GoogleIcon /> View more reviews on Google and post yours
           </a>
         </div>
       </div>
@@ -344,9 +359,6 @@ function Location() {
         <div className="loc-btns">
           <a className="btn btn-orange" href={cafe.mapsUrl} target="_blank" rel="noreferrer">
             Get Directions <Arrow />
-          </a>
-          <a className="btn btn-ghost" href={cafe.mapsUrl} target="_blank" rel="noreferrer">
-            Reviews on Google
           </a>
         </div>
       </div>
