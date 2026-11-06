@@ -30,6 +30,8 @@ img { display: block; max-width: 100%; }
 .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
 .btn-orange { background: var(--orange); color: #1e1e1e; }
 .btn-teal { background: var(--teal); color: #fff; }
+.btn-zomato { background: #e23744; color: #fff; }
+.btn-zomato:hover { background: #cb202d; }
 .btn-ghost { border-color: var(--tan); color: var(--tan); background: transparent; }
 .btn.big { padding: 15px 30px; font-size: 18px; }
 

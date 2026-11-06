@@ -188,14 +188,12 @@ export const specials = [
 
 // Real photos supplied by the cafe (see /public/images/Gallery)
 export const gallery = [
-  // Food & drink items first
+  // Food & drink items
   { src: './images/Gallery/oreo-shake.jpg', alt: 'Loaded Oreo milkshake with sprinkles and cookies' },
   { src: './images/Gallery/IMG-20261105-WA0014.jpg', alt: 'Lambuz delicious loaded burger' },
-  { src: './images/Gallery/brownie.png', alt: 'Rich fudgy chocolate brownie' },
   { src: './images/Gallery/IMG-20261105-WA0015.jpg', alt: 'Crispy seasoned french fries and bites' },
   { src: './images/Gallery/choco-lava-icecream.jpg', alt: 'Chocolate lava cake with ice cream swirl' },
   { src: './images/Gallery/IMG-20261105-WA0017.jpg', alt: 'Signature thick chocolate milkshake' },
-  { src: './images/Gallery/mojito.png', alt: 'Fresh mint mojito with ice' },
   { src: './images/Gallery/gadbad-sundae.png', alt: 'Gadbad sundae with nuts and jelly' },
   // Cafe ambience & dining seating
   { src: './images/Gallery/IMG-20261105-WA0010.jpg', alt: 'Lambuz Cafe cozy wooden seating & dining area' },
@@ -210,35 +208,35 @@ export const heroVideo = './images/Gallery/Video cover.mp4';
 // Google Reviews
 export const reviews = [
   {
-    name: 'Karthik Raja',
+    name: 'Dr. Shilpa Jain',
+    rating: 5,
+    tag: 'Food & Travel Creator',
+    date: '3 months ago',
+    comment:
+      'Where every bite feels like comfort! From the cozy vibes to the delicious food and amazing service, everything was on point. Ambience 9/10 ✨ Food & Service 9.5/10. Must-try spot in Erode!',
+  },
+  {
+    name: 'Kamali Arumugam',
     rating: 5,
     tag: 'Local Guide',
-    date: 'a month ago',
+    date: '4 years ago',
     comment:
-      'One of the best hangout spots in Erode for milkshakes and thick shakes! The Death by Chocolate shake and brownie blast are heavenly. Super affordable and friendly staff.',
+      'Shop background fantastic and foods are amazing.. 🤩🤩 Visit again for sure!',
   },
   {
-    name: 'Priyadharshini S.',
+    name: 'Vijay Baskar',
     rating: 5,
     tag: 'Verified Customer',
-    date: '3 weeks ago',
+    date: '3 years ago',
     comment:
-      'Amazing variety of fresh fruit juices and sundaes! The Mango Mastani and Gadbad are must-tries. Neat place, quick service, and consistently great taste every time.',
+      'Unexpected taste and customer care is very good... 😍 Loved the experience.',
   },
   {
-    name: 'Vignesh Kumar',
+    name: 'Siddarth S',
     rating: 5,
     tag: 'Local Guide',
-    date: '2 months ago',
+    date: '4 years ago',
     comment:
-      'Best place in Sampath Nagar for evening snacks and shakes. Grilled cheese sandwiches and Andhra french fries are so crispy and flavorful. Highly recommended for friends and family!',
-  },
-  {
-    name: 'Deepak V.',
-    rating: 5,
-    tag: 'Verified Customer',
-    date: '4 months ago',
-    comment:
-      'Top notch shakes and pocket-friendly menu. Ferrero Feast Milkshake and Choco Lava with Ice Cream were outstanding. Great ambient spot to chill.',
+      'Very compact cafe with varieties of dishes and beverages. Perfect spot to chill.',
   },
 ];
