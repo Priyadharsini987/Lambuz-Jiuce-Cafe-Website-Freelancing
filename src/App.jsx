@@ -25,9 +25,11 @@ const InstaIcon = () => (
 const Arrow = () => <span aria-hidden="true">→</span>;
 
 const ZomatoIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l7 4.5-7 4.5z"/>
-  </svg>
+  <img
+    src="./images/zomato_icon.svg"
+    alt="Order on Zomato"
+    className="zomato-badge-img"
+  />
 );
 
 function Header() {
@@ -51,8 +53,8 @@ function Header() {
         <a className="btn btn-teal header-btn" href={wa} target="_blank" rel="noreferrer">
           <WaIcon /> <span className="btn-text">Order on WhatsApp</span>
         </a>
-        <a className="btn btn-zomato header-btn header-zomato-btn" href={cafe.zomatoUrl} target="_blank" rel="noreferrer" title="Order on Zomato">
-          <ZomatoIcon /> <span className="btn-text">Order on Zomato</span>
+        <a className="header-zomato-link" href={cafe.zomatoUrl} target="_blank" rel="noreferrer" title="Order on Zomato" aria-label="Order on Zomato">
+          <ZomatoIcon />
         </a>
       </div>
 
